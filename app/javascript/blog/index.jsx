@@ -15,6 +15,8 @@ import PostsNew from './containers/posts_new';
 // import '../assets/stylesheets/application.scss';
 import postsReducer from './reducers/posts_reducer';
 
+// const root = document.getElementById('root');
+// const initialState = { posts: JSON.parse(root.dataset.ideas) };
 
 const reducers = combineReducers({
   posts: postsReducer,
@@ -29,7 +31,7 @@ ReactDOM.render(
     <Router history={history}>
       <div className="thin-container">
         <Switch>
-          <Route path="/" exact component={PostsIndex} />
+          <Route path="/" exact component={} />
           <Route path="/posts/new" exact component={PostsNew} />
           <Route path="/posts/:id" component={PostsShow} />
         </Switch>

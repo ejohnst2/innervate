@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Creating 5 ideas...'
+5.times do |i|
+  idea = Idea.create!(
+    name: Faker::Company.name,
+    content: Faker::Company.catch_phrase
+  )
+  puts "#{i + 1}. #{idea.name}"
+end
+puts 'Finished!'
