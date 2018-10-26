@@ -34,7 +34,7 @@ class PostsNew extends Component {
             type="text"
             component={this.renderField}
           />
-          <label htmlFor="content">Content Blondtent</label>
+          <label htmlFor="content">Content</label>
           <Field
             className="form-control"
             label="Content"
