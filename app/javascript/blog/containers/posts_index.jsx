@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { fetchPosts } from '../actions';
+import { fetchIdeas } from '../actions';
 
 class PostsIndex extends Component {
   componentWillMount() {
-    this.props.fetchPosts();
+    this.props.fetchIdeas();
   }
 
   renderPosts() {
-    return this.props.posts.map((post) => {
+    return this.props.ideas.map((idea) => {
       return (
-        <Link to={`/posts/${post.id}`} key={post.id}>
+        <Link to={`/ideas/${idea.id}`} key={idea.id}>
           <div className="post-item">
-            <h3>{post.title}</h3>
-            <p>{post.content}</p>
+            <h3>{idea.channel}</h3>
+            <p>{idea.content}</p>
           </div>
         </Link>);
     });
@@ -27,7 +27,7 @@ class PostsIndex extends Component {
       <div>
         <div className="first-row">
           <h3>Blog</h3>
-          <Link className="btn btn-primary btn-cta" to="/posts/new">
+          <Link className="btn btn-primary btn-cta" to="/ideas/new">
             Let's write a post!
           </Link>
         </div>
@@ -39,12 +39,12 @@ class PostsIndex extends Component {
 
 function mapStateToProps(state) {
   return {
-    posts: state.posts
+    ideas: state.ideas
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchPosts }, dispatch);
+  return bindActionCreators({ fetchIdeas }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostsIndex);

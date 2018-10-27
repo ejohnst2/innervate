@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { fetchPost } from '../actions';
+import { fetchIdea } from '../actions';
 
 class PostsShow extends Component {
   componentWillMount() {
     // CHECK IF POST NOT ALREADY THERE?
-    if (!this.props.post) {
-      this.props.fetchPost(this.props.match.params.id);
+    if (!this.props.idea) {
+      this.props.fetchIdea(this.props.match.params.id);
     }
   }
 
@@ -21,8 +21,8 @@ class PostsShow extends Component {
     return (
       <div>
         <div className="post-item">
-          <h3>{this.props.post.title}</h3>
-          <p>{this.props.post.content}</p>
+          <h3>{this.props.idea.channel}</h3>
+          <p>{this.props.idea.content}</p>
         </div>
         <Link to="/">
           Back
@@ -34,12 +34,12 @@ class PostsShow extends Component {
 
 function mapStateToProps(state, ownProps) {
   const idFromUrl = parseInt(ownProps.match.params.id, 10);
-  const post = state.posts.find(p => p.id === idFromUrl);
-  return { post };
+  const idea = state.ideas.find(p => p.id === idFromUrl);
+  return { idea };
 }
 
 function mapDispatchToProps(dispatch) {
-return bindActionCreators({ fetchPost }, dispatch);
+return bindActionCreators({ fetchIdea }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostsShow);

@@ -1,10 +1,10 @@
-export const FETCH_POSTS = 'FETCH_POSTS';
-export const FETCH_POST = 'FETCH_POST';
-export const POST_CREATED = 'POST_CREATED';
+export const FETCH_IDEAS = 'FETCH_IDEAS';
+export const FETCH_IDEA = 'FETCH_IDEA';
+export const IDEA_CREATED = 'IDEA_CREATED';
 
 const ROOT_URL = '/api/v1';
 
-export function createPost(body, callback) {
+export function createIdea(body, callback) {
   const request = fetch(`${ROOT_URL}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -13,28 +13,28 @@ export function createPost(body, callback) {
     .then(callback);
 
   return {
-    type: POST_CREATED,
+    type: IDEA_CREATED,
     payload: request
   };
 }
 
-export function fetchPost(id) {
-  const promise = fetch(`http://reduxblog.herokuapp.com/api/posts/${id}?key=WAGON-BLOG`)
+export function fetchIdea(id) {
+  const promise = fetch(`${ROOT_URL}/ideas/${id}`)
     .then(response => response.json());
 
   return {
-    type: FETCH_POST,
+    type: FETCH_IDEA,
     payload: promise
   }
 }
 
-export function fetchPosts() {
+export function fetchIdeas() {
   // AJAX request
-  const promise = fetch("http://reduxblog.herokuapp.com/api/posts?key=WAGON-BLOG")
+  const promise = fetch(`${ROOT_URL}/ideas`)
     .then(response => response.json());
 
   return {
-    type: FETCH_POSTS,
+    type: FETCH_IDEAS,
     payload: promise
   }
 }
