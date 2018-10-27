@@ -3,6 +3,8 @@ class IdeasController < ApplicationController
   end
 
   def create
+    # @idea = Idea.create(idea_params)
+    # render json: @idea
   end
 
   def update

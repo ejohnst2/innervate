@@ -6,12 +6,41 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'destroying all now...'
+Idea.destroy_all
+User.destroy_all
+Team.destroy_all
+
+
+puts 'Creating team...'
+team = Team.create!(
+  plan: "free",
+  name: "changeinit",
+  slack_id: "12VV"
+)
+
+puts 'Creating user...'
+
+user = User.create!(
+  email: "rayblack@gmail",
+  password: "rayray",
+  team: team
+)
+
 puts 'Creating 5 ideas...'
-5.times do |i|
-  idea = Idea.create!(
-    name: Faker::Company.name,
-    content: Faker::Company.catch_phrase
+
+idea =  Idea.create!(
+    category: "yo this work",
+    content: "best idea ever",
+    channel: "newchannel",
+    user: user
   )
-  puts "#{i + 1}. #{idea.name}"
-end
-puts 'Finished!'
+
+
+idea_two = Idea.create!(
+    category: "yo this ishwork",
+    content: "best idea ever",
+    channel: "newchannel",
+    user: user
+  )
+
