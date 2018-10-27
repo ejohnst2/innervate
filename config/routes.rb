@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+# automatic rails routes
   get 'ideas/create'
   get 'ideas/update'
   get 'ideas/delete'
@@ -28,5 +30,5 @@ Rails.application.routes.draw do
 
 #routing for the landing page
   get "/landing", to: "pages#landing"
-
+  get "/index", to: "pages#index"
 end
