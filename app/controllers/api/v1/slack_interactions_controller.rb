@@ -4,12 +4,11 @@ class Api::V1::SlackInteractionsController < ActionController::Base
 
   #  create action for creating idea object with Slack action
   def create
-
-  # use regex to get hashtags as category
+    category = params[:text].scan(/#(\w+)/).flatten
 
     idea = Idea.create!(
       content: params[:text],
-      category: "peace",
+      category: category,
       user: User.find(3),
       channel: params[:channel_name]
       )
@@ -50,15 +49,12 @@ class Api::V1::SlackInteractionsController < ActionController::Base
 
 private
 
+  # check if the user exists
   def check_user_exists
-    not_a_user = { "text": "You ain't a user - please sign up" }
-
-    unless User.exists?(username: params[:user_name])
-      render json: not_a_user
-    end
-    # check if the user exists
-    # if the user does not exist, send them a url to sign up
-    # if the user does exist, then continue to add the idea
+    # not_a_user = { "text": "You ain't a user - please sign up with this link" }
+    # unless User.exists?(username: params[:user_name])
+    #   render json: not_a_user
+    # end
   end
 
   #  to verify the request

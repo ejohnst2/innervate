@@ -17,5 +17,6 @@ class IdeasController < ApplicationController
   end
 
   def index
+    # get ideas where @idea.user.team === @user.team
   end
 end
