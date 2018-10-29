@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   end
 
 # devise routes for user authentication
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  get "/auth/slack/callback", to: 'pages#home'
 
 #routing to the ReactJS SPA
   root to: 'pages#home'

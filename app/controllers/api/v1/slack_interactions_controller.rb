@@ -57,6 +57,12 @@ private
     # end
   end
 
+  def heat_check
+    # checks how many endorsements an idea has, if enough to be fire - start a new slack channel
+    # client = Slack::Web::Client.new(token: 'your_token')
+    # client.channels_create(name: "my_channel_name")
+  end
+
   #  to verify the request
   def verify_slack_request
     timestamp = request.headers['X-Slack-Request-Timestamp']
