@@ -1,10 +1,18 @@
 class Api::V1::SlackInteractionsController < ActionController::Base
   skip_before_action :verify_authenticity_token
-  before_action :verify_slack_request
+  before_action :verify_slack_request, :check_user_exists
 
   #  create action for creating idea object with Slack action
   def create
-    idea = Idea.create!(content: params[:text], category: "peace", user: User.find(3))
+
+  # use regex to get hashtags as category
+
+    idea = Idea.create!(
+      content: params[:text],
+      category: "peace",
+      user: User.find(3),
+      channel: params[:channel_name]
+      )
     json = {
       "text": "#{idea.content}",
       "attachments": [
@@ -35,11 +43,23 @@ class Api::V1::SlackInteractionsController < ActionController::Base
     render json: json
   end
 
-  #  to endorse an idea via Slack
   def endorse
+    # need slack action
+    # to endorse an idea via Slack
   end
 
 private
+
+  def check_user_exists
+    not_a_user = { "text": "You ain't a user - please sign up" }
+
+    unless User.exists?(username: params[:user_name])
+      render json: not_a_user
+    end
+    # check if the user exists
+    # if the user does not exist, send them a url to sign up
+    # if the user does exist, then continue to add the idea
+  end
 
   #  to verify the request
   def verify_slack_request
