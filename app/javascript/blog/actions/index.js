@@ -5,9 +5,12 @@ export const IDEA_CREATED = 'IDEA_CREATED';
 const ROOT_URL = '/api/v1';
 
 export function createIdea(body, callback) {
-  const request = fetch(`${ROOT_URL}`, {
+  const request = fetch(`${ROOT_URL}/ideas`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify(body)
   }).then(response => response.json())
     .then(callback);

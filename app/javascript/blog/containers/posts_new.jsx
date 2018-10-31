@@ -7,6 +7,7 @@ class PostsNew extends Component {
   onSubmit = (values) => {
     this.props.createIdea(values, (post) => {
       this.props.history.push('/'); // Navigate after submit
+      console.log(this.props.history)
       return post;
     });
   }
@@ -29,8 +30,8 @@ class PostsNew extends Component {
       <div>
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
           <Field
-            label="Title"
-            name="title"
+            label="Category"
+            name="category"
             type="text"
             component={this.renderField}
           />

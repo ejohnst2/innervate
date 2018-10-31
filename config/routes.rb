@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 #routing to the ReactJS SPA
   root to: 'pages#home'
   get "/ideas/:id", to: 'pages#home'
-  get "ideas/new", to: 'pages#home'
+  get "/ideas/new", to: 'pages#home'
 
 #routing for the landing page
   get "/landing", to: "pages#landing"
