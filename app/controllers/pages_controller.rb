@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    # @ideas = Idea.all
+    @ideas = Idea.all
   end
 
   def landing

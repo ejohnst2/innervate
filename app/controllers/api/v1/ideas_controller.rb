@@ -17,7 +17,7 @@ class Api::V1::IdeasController < ActionController::Base
   private
 
   def idea_params
-    params.require(:idea).permit(:content, :category)
+    params.require(:idea).permit(:content, :category, :channel)
   end
 
 end

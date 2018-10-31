@@ -10,7 +10,8 @@ class Api::V1::SlackInteractionsController < ActionController::Base
       content: params[:text],
       category: category,
       user: User.find(3),
-      channel: params[:channel_name]
+      channel: params[:channel_name],
+      stage: "seed"
       )
     json = {
       "text": "#{idea.content}",
@@ -51,10 +52,10 @@ private
 
   # check if the user exists
   def check_user_exists
-    # not_a_user = { "text": "You ain't a user - please sign up with this link" }
-    # unless User.exists?(username: params[:user_name])
-    #   render json: not_a_user
-    # end
+    not_a_user = { "text": "You ain't a user - please sign up with this link: ENV['BASE_URL']/users/sign_up" }
+    unless User.exists?(username: params[:user_name])
+      render json: not_a_user
+    end
   end
 
   def heat_check

@@ -18,12 +18,5 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
-end
 
-    # User.create!(
-    #   username: auth.info.user_id,
-    #   uid: auth.uid,
-    #   team: Team.find(3),
-    #   email: "rayray@ray.com",
-    #   password: Devise.friendly_token[0,20]
-    # )
+end

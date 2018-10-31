@@ -14,7 +14,7 @@ class PostsShow extends Component {
   }
 
   render() {
-    if (!this.props.post) {
+    if (!this.props.idea) {
       return <p>Loading...</p>;
     }
 
