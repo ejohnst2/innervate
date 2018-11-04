@@ -1,6 +1,12 @@
 {
   "name": "innervate",
   "private": true,
+  "scripts": {
+    "dev": "nodemon --exec babel-node index.js",
+    "start": "node index.js",
+    "bot": "ngrok http 3000",
+    "test": "mocha tests --timeout 10000"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
@@ -18,6 +24,7 @@
     "redux-promise": "^0.6.0"
   },
   "devDependencies": {
+    "ngrok": "^3.1.0",
     "webpack-dev-server": "2.11.2"
   }
 }
