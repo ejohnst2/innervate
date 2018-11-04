@@ -12,11 +12,10 @@ import PostsIndex from './containers/posts_index';
 import PostsShow from './containers/posts_show';
 import PostsNew from './containers/posts_new';
 
-// import '../assets/stylesheets/application.scss';
 import postsReducer from './reducers/posts_reducer';
 
 // const root = document.getElementById('root');
-// const initialState = { posts: JSON.parse(root.dataset.ideas) };
+const initialState = { ideas: JSON.parse(root.dataset.ideas) };
 
 const reducers = combineReducers({
   ideas: postsReducer,
@@ -27,13 +26,13 @@ const middlewares = applyMiddleware(reduxPromise, logger);
 
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers, {}, middlewares)}>
+  <Provider store={createStore(reducers, initialState, middlewares)}>
     <Router history={history}>
       <div className="thin-container">
         <Switch>
           <Route path="/" exact component={PostsIndex} />
-          <Route path="/posts/new" exact component={PostsNew} />
-          <Route path="/posts/:id" component={PostsShow} />
+          <Route path="/ideas/new" exact component={PostsNew} />
+          <Route path="/ideas/:id" component={PostsShow} />
         </Switch>
       </div>
     </Router>

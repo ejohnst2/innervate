@@ -13,11 +13,19 @@ Team.destroy_all
 
 
 puts 'Creating team...'
-team = Team.create!(
+team_one = Team.create!(
   plan: "free",
-  name: "changeinit",
-  slack_id: "12VV"
+  name: "team_one",
+  slack_id: "150000"
 )
+
+puts 'Creating team...'
+team_two = Team.create!(
+  plan: "free",
+  name: "team_two",
+  slack_id: "140000"
+)
+
 
 puts 'Creating user...'
 

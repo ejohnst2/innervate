@@ -16,6 +16,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# for user authentication
+gem 'omniauth-slack'
+gem 'omniauth'
 gem 'devise'
 
 group :development do

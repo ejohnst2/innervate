@@ -7,9 +7,9 @@ export default function(state = [], action) {
     case FETCH_IDEA:
       // action.payload is an object
       return [ action.payload ];
-    // case POST_CREATED:
-    //   // TODO: push it to the array of posts
-    //   return state;
+    case IDEA_CREATED:
+      // TODO: push it to the array of posts
+      return state;
     default:
       return state;
   }
