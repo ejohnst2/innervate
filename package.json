@@ -5,8 +5,7 @@
     "dev": "nodemon --exec babel-node index.js",
     "start": "node index.js",
     "bot": "ngrok http 3000",
-    "test": "mocha tests --timeout 10000",
-    "postinstall": "npm run build"
+    "test": "mocha tests --timeout 10000"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
@@ -16,6 +15,7 @@
     "jquery": "^3.3.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",

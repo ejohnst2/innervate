@@ -5,7 +5,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import reduxPromise from 'redux-promise';
 import logger from 'redux-logger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createHistory as history } from 'history';
+import { createBrowserHistory as history } from 'history';
 import { reducer as formReducer } from 'redux-form';
 
 import PostsIndex from './containers/posts_index';
@@ -25,10 +25,12 @@ const reducers = combineReducers({
 const middlewares = applyMiddleware(reduxPromise, logger);
 
 // render an instance of the component in the DOM
+// history={history} add browser history back into router
+
 ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
-    <Router history={history}>
-      <div className="thin-container">
+    <Router history={history} >
+      <div className="container">
         <Switch>
           <Route path="/" exact component={PostsIndex} />
           <Route path="/ideas/new" exact component={PostsNew} />

@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import { fetchIdeas } from '../actions';
 
+import { Grid, Row, Col } from 'react-bootstrap';
+
 class PostsIndex extends Component {
   componentWillMount() {
     this.props.fetchIdeas();
@@ -13,12 +15,15 @@ class PostsIndex extends Component {
   renderPosts() {
     return this.props.ideas.map((idea) => {
       return (
-        <Link to={`/ideas/${idea.id}`} key={idea.id}>
-          <div className="post-item">
-            <h3>{idea.channel}</h3>
-            <p>{idea.content}</p>
-          </div>
-        </Link>);
+        <Col sm={12} md={6} lg={4} >
+          <Link to={`/ideas/${idea.id}`} key={idea.id}>
+            <div className="post-item">
+              <h3>{idea.content}</h3>
+              <p>from: {idea.channel}</p>
+            </div>
+          </Link>
+        </Col>
+        );
     });
   }
 
@@ -26,12 +31,14 @@ class PostsIndex extends Component {
     return (
       <div>
         <div className="first-row">
-          <h3>Blog</h3>
+          <h3>Idea Lab</h3>
           <Link className="btn btn-primary btn-cta" to="/ideas/new">
-            Let's write a post!
+            I've got a great idea...
           </Link>
         </div>
-        {this.renderPosts()}
+        <Row>
+          {this.renderPosts()}
+        </Row>
       </div>
     );
   }
