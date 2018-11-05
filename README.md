@@ -1,4 +1,19 @@
-# Welcome to the best idea tool for companies 
+# Product Overview
+Innervate provides you the structure and flexibility to let ideas flow and flourish without having to manage anything yourself. Using a simple idea command and hashtags to categorize, your idea board will start populating from your workforce.  
+
+How do you start and end an initiative? 
+
+What can you do with ideas? 
+1. Post an idea by prepending a message with the /idea command in Slack
+2. Add categories to your ideas using hashtags, this will be used for organization
+3. Endorse somebody’s idea if you want to see it explored further 
+4. Suggest if you have initial insight, feedback, or an idea build to share
+5. Create a relation between another idea that you saw to initialise an idea cluster
+
+How does it all work together?
+Through its idea lifecycle, a single idea can be seed, promising, or initiative. Once an idea is endorsed by 10 people, a Slack channel with the title of the idea is created with the original ideator and the endorsees of that idea. Well-endorsed single ideas and idea clusters will have the opportunity to be converted into an initiative. 
+
+While logged into your internet idea lab, you can sort your organisation’s ideas based on any combination of category, endorsement, stage, and recency. Ideas will default to the idea graveyard after 90 days since its original posting. Users can level up and have different stages of ideation. If a user passes X ideas, make an announcement to the Slack channel. 
 
 ### Core Project Stack
 * UX/UI Design: Framer X
