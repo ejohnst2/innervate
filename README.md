@@ -22,6 +22,11 @@ While logged into your internet idea lab, you can sort your organisation’s ide
 * Database: Postgresql
 * Production Hosting: Heroku 
 
+## External APIs
+* Realtime Board
+* Slack 
+* Stripe 
+
 ## System dependencies
 
 * Ruby Version: ruby 2.5.1
