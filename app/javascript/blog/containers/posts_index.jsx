@@ -33,12 +33,6 @@ class PostsIndex extends Component {
     return (
       <div>
         <NavBar />
-        <div className="first-row">
-          <h3>Idea Lab</h3>
-          <Link className="btn btn-primary btn-cta" to="/ideas/new">
-            I've got a great idea...
-          </Link>
-        </div>
         <Row>
           {this.renderPosts()}
         </Row>
