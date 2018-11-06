@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { fetchIdea } from '../actions';
+
+import IdeaPanel from '../containers/idea_panel'
+
 
 class PostsShow extends Component {
   componentWillMount() {
@@ -20,9 +24,12 @@ class PostsShow extends Component {
 
     return (
       <div>
-        <div className="post-item">
-          <h3>{this.props.idea.channel}</h3>
-          <p>{this.props.idea.content}</p>
+        <div id="idea-box">
+          <div className="post-item">
+            <h3>{this.props.idea.channel}</h3>
+            <p>{this.props.idea.content}</p>
+          </div>
+          <IdeaPanel />
         </div>
         <Link to="/">
           Back

@@ -7,6 +7,8 @@ import { fetchIdeas } from '../actions';
 
 import { Grid, Row, Col } from 'react-bootstrap';
 
+import NavBar from '../components/nav_bar';
+
 class PostsIndex extends Component {
   componentWillMount() {
     this.props.fetchIdeas();
@@ -30,6 +32,7 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <div className="first-row">
           <h3>Idea Lab</h3>
           <Link className="btn btn-primary btn-cta" to="/ideas/new">

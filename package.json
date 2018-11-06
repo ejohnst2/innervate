@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node index.js",
     "start": "node index.js",
+    "launch": "webpack-dev-server",
     "bot": "ngrok http 3000",
     "test": "mocha tests --timeout 10000"
   },

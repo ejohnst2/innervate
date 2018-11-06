@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
 import { createIdea } from '../actions';
 
@@ -47,6 +49,9 @@ class PostsNew extends Component {
             Create Post
           </button>
         </form>
+        <Link to="/">
+          Back
+        </Link>
       </div>
     );
   }
