@@ -1,5 +1,6 @@
 class TeamsController < ApplicationController
   def create
+    # Team.create(team_params)
   end
 
   def index
@@ -13,4 +14,10 @@ class TeamsController < ApplicationController
 
   def delete
   end
+
+  private
+
+  # def team_params
+  #   params.require(:team).permit(:name, :slack_id, :plan)
+  # end
 end
