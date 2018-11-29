@@ -14,11 +14,12 @@ class User < ApplicationRecord
       user.uid = auth.uid
       user.team = Team.find_by(slack_id: auth.extra.raw_info.team_id)
       user.username = auth.info.user
+      user.firstname = auth.info.first_name
+      user.lastname = auth.info.last_name
       auth.info.email.blank? ? user.email =  "nil@nil.com" : user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.save
       puts user.errors.full_messages
-      raise
     end
   end
 end
