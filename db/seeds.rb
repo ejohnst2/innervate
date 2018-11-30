@@ -32,7 +32,7 @@ puts 'Creating user...'
 user = User.create!(
   email: "rayblack@gmail",
   password: "rayray",
-  team: team
+  team: team_one
 )
 
 puts 'Creating 5 ideas...'
