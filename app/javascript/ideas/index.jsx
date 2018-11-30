@@ -8,18 +8,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory as history } from 'history';
 import { reducer as formReducer } from 'redux-form';
 
-import PostsIndex from './containers/posts_index';
-import PostsShow from './containers/posts_show';
-import PostsNew from './containers/posts_new';
-import NavBar from './components/nav_bar'
+import IdeasIndex from './containers/ideas_index';
+import IdeasShow from './containers/ideas_show';
+import IdeasNew from './containers/ideas_new';
+import NavBar from './components/nav_bar';
 
-import postsReducer from './reducers/posts_reducer';
+import ideasReducer from './reducers/ideas_reducer';
 
-// const root = document.getElementById('root');
+const root = document.getElementById('root');
 const initialState = { ideas: JSON.parse(root.dataset.ideas) };
 
 const reducers = combineReducers({
-  ideas: postsReducer,
+  ideas: ideasReducer,
   form: formReducer
 });
 
@@ -33,9 +33,9 @@ ReactDOM.render(
     <Router history={history} >
       <div className="container">
         <Switch>
-          <Route path="/" exact component={PostsIndex} />
-          <Route path="/ideas/new" exact component={PostsNew} />
-          <Route path="/ideas/:id" component={PostsShow} />
+          <Route path="/" exact component={IdeasIndex} />
+          <Route path="/ideas/new" exact component={IdeasNew} />
+          <Route path="/ideas/:id" component={IdeasShow} />
         </Switch>
       </div>
     </Router>

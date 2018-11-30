@@ -5,11 +5,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { fetchIdea } from '../actions';
+import IdeaPanel from './idea_panel';
 
-import IdeaPanel from '../containers/idea_panel'
 
-
-class PostsShow extends Component {
+class IdeasShow extends Component {
   componentWillMount() {
     // CHECK IF POST NOT ALREADY THERE?
     if (!this.props.idea) {
@@ -46,12 +45,7 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps(dispatch) {
-return bindActionCreators({ fetchIdea }, dispatch);
+  return bindActionCreators({ fetchIdea }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostsShow);
-
-
-
-
-
+export default connect(mapStateToProps, mapDispatchToProps)(IdeasShow);
