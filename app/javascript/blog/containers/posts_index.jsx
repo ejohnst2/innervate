@@ -40,7 +40,7 @@ class PostsIndex extends Component {
 function mapStateToProps(state) {
   return {
     ideas: state.ideas
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {
