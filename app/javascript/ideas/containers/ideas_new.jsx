@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
 import { createIdea } from '../actions';
 
-class PostsNew extends Component {
+class IdeasNew extends Component {
   onSubmit = (values) => {
     this.props.createIdea(values, (post) => {
       this.props.history.push('/'); // Navigate after submit
@@ -47,13 +49,16 @@ class PostsNew extends Component {
             Create Post
           </button>
         </form>
+        <Link to="/">
+          Back
+        </Link>
       </div>
     );
   }
 }
 
 export default reduxForm({ form: 'newPostForm' })(
-  connect(null, { createIdea })(PostsNew)
+  connect(null, { createIdea })(IdeasNew)
 );
 
 

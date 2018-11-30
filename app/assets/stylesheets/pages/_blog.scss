@@ -15,17 +15,37 @@ body {
   margin: 0 auto;
 }
 
+// for the idea show view
+
+#idea-panel{
+  background-color: white;
+  height: 50vh;
+  width: 100%;
+}
+
+#idea-panel h1 {
+  font-size: 12px;
+}
+
+#idea-box {
+  display: flex;
+}
+
+// for the post items
+
 .post-item {
   width: 100%;
   padding: 20px;
+  border-radius: 8px;
   background-color: white;
+  height: 50vh;
   margin-bottom: 10px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 h3 {
   margin-top: 0;
-  font-family: 'Yeseva One';
+  // font-family: 'Yeseva One';
 }
 
 a,
@@ -69,7 +89,7 @@ a:focus {
 
 input.form-control {
   font-size: 22px;
-  font-family: 'Yeseva One';
+  // font-family: 'Yeseva One';
 }
 
 textarea {

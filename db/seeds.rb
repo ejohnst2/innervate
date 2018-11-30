@@ -7,12 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'destroying all now...'
+
 Idea.destroy_all
 User.destroy_all
 Team.destroy_all
 
 
+# create teams
+
 puts 'Creating team...'
+
 team_one = Team.create!(
   plan: "free",
   name: "team_one",
@@ -26,29 +30,27 @@ team_two = Team.create!(
   slack_id: "140000"
 )
 
+# create users
 
 puts 'Creating user...'
 
-user = User.create!(
-  email: "rayblack@gmail",
-  password: "rayray",
-  team: team_one
-)
-
-puts 'Creating 5 ideas...'
-
-idea =  Idea.create!(
-    category: "yo this work",
-    content: "best idea ever",
-    channel: "newchannel",
-    user: user
+5.times do
+  User.create!(
+    email: Faker::Internet.free_email,
+    username: Faker::Internet.username,
+    password: Faker::Internet.password,
+    team: [team_one, team_two].sample
   )
+end
 
+# create ideas
+puts 'Creating 10 ideas...'
 
-idea_two = Idea.create!(
-    category: "yo this ishwork",
-    content: "best idea ever",
-    channel: "newchannel",
-    user: user
+10.times do
+  Idea.create!(
+    category: Faker::Hacker.adjective,
+    content: Faker::Hacker.say_something_smart,
+    channel: Faker::Hacker.noun,
+    user: User.all.sample
   )
-
+end
