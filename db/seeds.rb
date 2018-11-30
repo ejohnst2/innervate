@@ -39,12 +39,11 @@ puts 'Creating user...'
     email: Faker::Internet.free_email,
     username: Faker::Internet.username,
     password: Faker::Internet.password,
-    team: (team_one, team_two).sample
+    team: [team_one, team_two].sample
   )
 end
 
 # create ideas
-
 puts 'Creating 10 ideas...'
 
 10.times do
@@ -52,6 +51,6 @@ puts 'Creating 10 ideas...'
     category: Faker::Hacker.adjective,
     content: Faker::Hacker.say_something_smart,
     channel: Faker::Hacker.noun,
-    user: User.sample
+    user: User.all.sample
   )
 end
