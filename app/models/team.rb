@@ -1,6 +1,6 @@
 class Team < ApplicationRecord
   has_many :users
-  # has_many :ideas, through: :user
+  # has_many :ideas, through: :users
 
   def self.from_omniauth(auth)
     unless Team.where(slack_id: auth.extra.raw_info.team_id).exists?

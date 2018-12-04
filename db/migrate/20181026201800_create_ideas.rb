@@ -3,9 +3,11 @@ class CreateIdeas < ActiveRecord::Migration[5.2]
     create_table :ideas do |t|
       t.references :user, foreign_key: true
       t.text :content
-      t.string :category
+      t.array :category
       t.string :stage
       t.string :channel
+      t.json :endorsements
+      t.json :insights
 
       t.timestamps
     end
