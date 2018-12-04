@@ -1,8 +1,7 @@
-class Api::V1::IdeasController < ActionController::Base
-  skip_before_action :verify_authenticity_token
+class Api::V1::IdeasController < Api::V1::BaseController
 
   def index
-    @ideas = Idea.order(created_at: :desc)
+    @ideas = policy_scope(Idea).order(created_at: :desc)
     render json: @ideas
   end
 
