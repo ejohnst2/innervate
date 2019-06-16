@@ -9,15 +9,15 @@ export function createIdea(body, callback) {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   }).then(response => response.json())
     .then(callback);
 
   return {
     type: IDEA_CREATED,
-    payload: request
+    payload: request,
   };
 }
 
@@ -27,8 +27,8 @@ export function fetchIdea(id) {
 
   return {
     type: FETCH_IDEA,
-    payload: promise
-  }
+    payload: promise,
+  };
 }
 
 export function fetchIdeas() {
@@ -38,7 +38,6 @@ export function fetchIdeas() {
 
   return {
     type: FETCH_IDEAS,
-    payload: promise
-  }
+    payload: promise,
+  };
 }
-
