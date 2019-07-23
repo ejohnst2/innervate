@@ -30,7 +30,7 @@ const middlewares = applyMiddleware(reduxPromise, logger);
 
 ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
-    <Router history={history} >
+    <Router history={history}>
       <div className="container">
         <Switch>
           <Route path="/" exact component={IdeasIndex} />

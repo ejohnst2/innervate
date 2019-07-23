@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import { NavbarHeader, Nav, NavDropdown, NavItem, Navbar, MenuItem } from 'react-bootstrap';
-
 
 export default class NavBar extends Component {
   render(){
