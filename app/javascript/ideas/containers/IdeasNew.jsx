@@ -46,7 +46,7 @@ class IdeasNew extends Component {
             rows="8"
           />
           <button className="btn btn-primary" type="submit" disabled={this.props.pristine || this.props.submitting}>
-            Create Post
+            Create Idea
           </button>
         </form>
         <Link to="/">

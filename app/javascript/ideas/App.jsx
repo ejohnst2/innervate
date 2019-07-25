@@ -8,12 +8,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory as history } from 'history';
 import { reducer as formReducer } from 'redux-form';
 import IdeasIndex from './containers/IdeasIndex/IdeasIndex';
-import IdeasShow from './containers/ideas_show';
-import IdeasNew from './containers/ideas_new';
-import NewIdeaButton from './components/NewIdeaButton';
+import IdeasShow from './containers/IdeasShow';
+import IdeasNew from './containers/IdeasNew';
 
 
-import ideasReducer from './reducers/ideas_reducer';
+import ideasReducer from './reducers/ideasReducer';
 
 const root = document.getElementById('root');
 const initialState = { ideas: JSON.parse(root.dataset.ideas) };

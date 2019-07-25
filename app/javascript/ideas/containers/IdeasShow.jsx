@@ -5,12 +5,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { fetchIdea } from '../actions';
-import IdeaPanel from './idea_panel';
+import IdeaPanel from './IdeaPanel';
 
 
 class IdeasShow extends Component {
   componentWillMount() {
-    // CHECK IF POST NOT ALREADY THERE?
     if (!this.props.idea) {
       this.props.fetchIdea(this.props.match.params.id);
     }
