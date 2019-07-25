@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class IdeaPanel extends Component {
   render(){
     return(
