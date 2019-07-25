@@ -7,7 +7,7 @@ import logger from 'redux-logger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory as history } from 'history';
 import { reducer as formReducer } from 'redux-form';
-import IdeasIndex from './containers/ideas_index';
+import IdeasIndex from './containers/IdeasIndex/IdeasIndex';
 import IdeasShow from './containers/ideas_show';
 import IdeasNew from './containers/ideas_new';
 import NewIdeaButton from './components/NewIdeaButton';
@@ -32,7 +32,6 @@ ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
     <Router history={history}>
       <div className="container">
-        <NewIdeaButton/>
         <Switch>
           <Route path="/" exact component={IdeasIndex} />
           <Route path="/ideas/new" exact component={IdeasNew} />
@@ -41,5 +40,5 @@ ReactDOM.render(
       </div>
     </Router>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

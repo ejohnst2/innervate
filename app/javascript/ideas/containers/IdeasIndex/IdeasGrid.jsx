@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
-import { fetchIdeas } from '../actions';
+import { fetchIdeas } from '../../actions';
 
-class IdeasIndex extends Component {
+class IdeasGrid extends Component {
   componentWillMount() {
     this.props.fetchIdeas();
   }
@@ -47,4 +47,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchIdeas }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(IdeasIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(IdeasGrid);

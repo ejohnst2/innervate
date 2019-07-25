@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NewIdeaButton = () => {
   return (
-    <Link to="ideas/new">Hello</Link>
+    <Link to="ideas/new">New Idea</Link>
   );
 };
 

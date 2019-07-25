@@ -12,7 +12,6 @@ class App extends Component {
     return(
       <Router history={history}>
         <div className="container">
-          <NewIdeaButton></NewIdeaButton>
           <Switch>
             <Route path="/" exact component={IdeasIndex} />
             <Route path="/ideas/new" exact component={IdeasNew} />
