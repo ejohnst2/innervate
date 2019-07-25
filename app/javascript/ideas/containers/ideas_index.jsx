@@ -3,18 +3,12 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
-
-// import redux actions
 import { fetchIdeas } from '../actions';
-// import components
-import NavBar from '../components/nav_bar';
 
 class IdeasIndex extends Component {
   componentWillMount() {
     this.props.fetchIdeas();
   }
-
-
 
   renderIdeas() {
     return this.props.ideas.map((idea) => {
@@ -35,7 +29,6 @@ class IdeasIndex extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <Row>
           {this.renderIdeas()}
         </Row>
