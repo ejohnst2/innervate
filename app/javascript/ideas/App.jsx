@@ -7,13 +7,12 @@ import logger from 'redux-logger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory as history } from 'history';
 import { reducer as formReducer } from 'redux-form';
+import IdeasIndex from './containers/IdeasIndex/IdeasIndex';
+import IdeasShow from './containers/IdeasShow';
+import IdeasNew from './containers/IdeasNew';
 
-import IdeasIndex from './containers/ideas_index';
-import IdeasShow from './containers/ideas_show';
-import IdeasNew from './containers/ideas_new';
-import NavBar from './components/nav_bar';
 
-import ideasReducer from './reducers/ideas_reducer';
+import ideasReducer from './reducers/ideasReducer';
 
 const root = document.getElementById('root');
 const initialState = { ideas: JSON.parse(root.dataset.ideas) };
@@ -30,7 +29,7 @@ const middlewares = applyMiddleware(reduxPromise, logger);
 
 ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
-    <Router history={history} >
+    <Router history={history}>
       <div className="container">
         <Switch>
           <Route path="/" exact component={IdeasIndex} />
@@ -40,5 +39,5 @@ ReactDOM.render(
       </div>
     </Router>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
