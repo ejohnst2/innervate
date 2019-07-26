@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_155058) do
+ActiveRecord::Schema.define(version: 2019_07_26_060140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "endorsements", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "idea_id"
+    t.index ["idea_id"], name: "index_endorsements_on_idea_id"
+    t.index ["user_id"], name: "index_endorsements_on_user_id"
+  end
 
   create_table "ideas", force: :cascade do |t|
     t.bigint "user_id"
@@ -48,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_10_29_155058) do
     t.datetime "updated_at", null: false
     t.string "provider"
     t.string "uid"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["provider"], name: "index_users_on_provider"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -55,5 +63,7 @@ ActiveRecord::Schema.define(version: 2018_10_29_155058) do
     t.index ["uid"], name: "index_users_on_uid"
   end
 
+  add_foreign_key "endorsements", "ideas"
+  add_foreign_key "endorsements", "users"
   add_foreign_key "ideas", "users"
 end
