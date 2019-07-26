@@ -5,7 +5,7 @@
 ### Core Project Stack
 * UX/UI Design: Figma
 * API: Ruby-on-Rails
-* Interface: ReactJS
+* Interface: React/Redux
 * Database: Postgresql
 * Production Hosting: Heroku 
 * Continuous Integration: Travis CI 
