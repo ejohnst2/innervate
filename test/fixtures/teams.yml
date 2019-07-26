@@ -6,3 +6,7 @@ invalid_team:
   plan: free
   name: Google
   slack_id:
+no_plan_team:
+  plan:
+  name: Airbnb
+  slack_id: TB6U099A7
