@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_060140) do
   create_table "ideas", force: :cascade do |t|
     t.bigint "user_id"
     t.text "content"
-    t.string "category"
+    t.string "category", default: [], array: true
     t.string "stage"
     t.string "channel"
     t.datetime "created_at", null: false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_060140) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "avatar"
     t.bigint "team_id"
     t.string "username"
     t.string "firstname"

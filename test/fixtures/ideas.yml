@@ -1,0 +1,18 @@
+valid_idea:
+  user: tim
+  content: this is a new idea in the company channel that I’m logging and it needs to pass my validation
+  category: [marketing, product]
+  stage: seed
+  channel: product_development
+invalid_idea:
+  user:
+  content: this is a new idea in the company channel that I’m logging and it needs to pass my validation
+  category:
+  stage: seed
+  channel: testing_ideamachine
+short_idea:
+  user: tim
+  content: this log it needs to pass my validation
+  category: [office, people]
+  stage: seed
+  channel: testing_ideamachine

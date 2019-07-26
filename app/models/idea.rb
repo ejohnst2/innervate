@@ -1,4 +1,9 @@
 class Idea < ApplicationRecord
   belongs_to :user
-  # belongs_to :idea
+
+  validates :content, presence: true, length: { minimum: 50 }
+  validates :user, presence: true
+  validates :category, presence: true
+  validates :stage, presence: true
+  validates :channel, presence: true
 end

@@ -1,17 +1,6 @@
 Rails.application.routes.draw do
-
-# automatic rails routes
-  get 'ideas/create'
-  get 'ideas/update'
-  get 'ideas/delete'
-  get 'ideas/index'
-  get 'teams/create'
-  get 'teams/index'
-  get 'teams/update'
-  get 'teams/delete'
-
 # post and get requests for Slack - API endpoints
-  post '/Idea', to: 'api/v1/slack_interactions#create', :defaults => { :format => 'json' }
+  post '/slack_idea', to: 'api/v1/slack_interactions#create', :defaults => { :format => 'json' }
 
 # API routing
   namespace :api, defaults: { format: :json } do
