@@ -2,4 +2,4 @@ language: ruby
 rvm:
  - 2.5.3
 script:
- - rails test:models
+ - rake test:models
