@@ -1,6 +1,12 @@
 class User < ApplicationRecord
   has_many :ideas
   belongs_to :team
+
+  validates :username, presnce: true
+  validates :firstname, presnce: true
+  validates :lastname, presnce: true
+  validates :provider, presnce: true
+  validates :uid, presnce: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

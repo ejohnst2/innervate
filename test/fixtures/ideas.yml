@@ -1,11 +1,11 @@
 valid_idea:
-  user_id:
+  user:
   content:
   category:
   stage:
   channel:
 invalid_idea:
-  user_id:
+  user:
   content:
   category:
   stage:
