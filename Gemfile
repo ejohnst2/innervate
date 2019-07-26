@@ -10,7 +10,7 @@ gem 'redis'
 gem 'travis-lint'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'sass-rails'
 gem 'simple_form'
