@@ -23,7 +23,9 @@ class User < ApplicationRecord
       user.username = auth.info.user
       user.firstname = auth.info.first_name
       user.lastname = auth.info.last_name
-      auth.info.email.blank? ? user.email =  "nil@nil.com" : user.email = auth.info.email
+      user.avatar = auth.info.image
+      user.admin = auth.info.is_admin
+      auth.info.email.blank? ? user.email = "noemail@nil.com" : user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.save
       puts user.errors.full_messages
