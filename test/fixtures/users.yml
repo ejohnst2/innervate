@@ -1,4 +1,4 @@
-Tim:
+tim:
   email: tim@gmail.com
   encrypted_password:
   team:
@@ -7,8 +7,8 @@ Tim:
   lastname: John
   provider:
   uid:
-  admin:
-Tom:
+  admin: false
+tom:
   email: tom@gmail.com
   encrypted_password:
   team:
@@ -17,14 +17,14 @@ Tom:
   lastname: Curry
   provider:
   uid:
-  admin:
-Bob:
+  admin: false
+bob:
   email: bob@gmail.com
   encrypted_password:
   team:
   username: bigbob
-  firstname:
-  lastname:
+  firstname: Bob
+  lastname: Dylan
   provider:
   uid:
   admin: true

@@ -1,0 +1,12 @@
+valid_idea:
+  user_id:
+  content:
+  category:
+  stage:
+  channel:
+invalid_idea:
+  user_id:
+  content:
+  category:
+  stage:
+  channel:
