@@ -3,11 +3,12 @@ class User < ApplicationRecord
   belongs_to :team
 
   validates :team, presence: true
-  validates :username, presnce: true
-  validates :firstname, presnce: true
-  validates :lastname, presnce: true
-  validates :provider, presnce: true
-  validates :uid, presnce: true
+  validates :email, presence: true, format: { with: /^.+@.+$/ }
+  validates :username, presence: true
+  validates :firstname, presence: true
+  validates :lastname, presence: true
+  validates :provider, presence: true
+  validates :uid, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
