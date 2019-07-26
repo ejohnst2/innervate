@@ -3,7 +3,7 @@ class User < ApplicationRecord
   belongs_to :team
 
   validates :team, presence: true
-  validates :email, presence: true, format: { with: /^.+@.+$/ }
+  validates :email, presence: true, format: { with: /^.+@.+$/, :multiline => true }
   validates :username, presence: true
   validates :firstname, presence: true
   validates :lastname, presence: true

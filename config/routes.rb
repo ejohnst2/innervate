@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
 # post and get requests for Slack - API endpoints
   post '/Idea', to: 'api/v1/slack_interactions#create', :defaults => { :format => 'json' }
+  post '/idea', to: 'api/v1/slack_interactions#create', :defaults => { :format => 'json' }
 
 # API routing
   namespace :api, defaults: { format: :json } do

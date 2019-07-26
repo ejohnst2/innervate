@@ -9,7 +9,7 @@ class Api::V1::SlackInteractionsController < ActionController::Base
     idea = Idea.create!(
       content: params[:text],
       category: category,
-      user: User.find(3),
+      user: User.find(1),
       channel: params[:channel_name],
       stage: "seed"
       )
