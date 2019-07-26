@@ -25,6 +25,8 @@ While logged into your internet idea lab, you can sort your organisation’s ide
 * Frontend Framework: ReactJS
 * Database: Postgresql
 * Production Hosting: Heroku 
+* Continuous Integration: Travis CI 
+
 
 ## External APIs
 * Realtime Board
