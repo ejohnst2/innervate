@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
     assert true
   end
 
-  test "a user must have email, first_name, and last_name" do
+  test "a user must have email, uid, first_name, and last_name" do
     assert true
   end
 end

@@ -6,6 +6,7 @@ class IdeaTest < ActiveSupport::TestCase
   end
 
   test "an idea must belong to a user" do
-    assert true
+    idea = Idea.new
+    assert idea.valid?
   end
 end

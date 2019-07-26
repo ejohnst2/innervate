@@ -1,0 +1,30 @@
+Tim:
+  email: tim@gmail.com
+  encrypted_password:
+  team:
+  username: timZ
+  firstname: Tim
+  lastname: John
+  provider:
+  uid:
+  admin:
+Tom:
+  email: tom@gmail.com
+  encrypted_password:
+  team:
+  username: tom23
+  firstname: Tom
+  lastname: Curry
+  provider:
+  uid:
+  admin:
+Bob:
+  email: bob@gmail.com
+  encrypted_password:
+  team:
+  username: bigbob
+  firstname:
+  lastname:
+  provider:
+  uid:
+  admin: true
