@@ -1,5 +1,5 @@
 valid_endorsement:
-  user:
+  user: tom
   idea:
 invalid_endorsement:
   user:

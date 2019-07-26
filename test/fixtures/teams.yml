@@ -1,8 +1,8 @@
 valid_team:
-  plan:
-  name:
-  slack_id:
+  plan: free
+  name: Change Init
+  slack_id: TA6U099A7
 invalid_team:
-  plan:
-  name:
+  plan: free
+  name: Google
   slack_id:
