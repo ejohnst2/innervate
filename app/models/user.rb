@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :ideas
   belongs_to :team
 
+  validates :team, presence: true
   validates :username, presnce: true
   validates :firstname, presnce: true
   validates :lastname, presnce: true
@@ -14,10 +15,8 @@ class User < ApplicationRecord
          :omniauthable, :omniauth_providers => [:slack]
 
   def self.from_omniauth(auth)
-    # checks for user, if it returns nill, then it creates a user
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       puts JSON.pretty_generate(auth)
-      byebug
       user.uid = auth.uid
       user.team = Team.find_by(slack_id: auth.extra.raw_info.team_id)
       user.username = auth.info.user
