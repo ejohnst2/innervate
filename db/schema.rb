@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_060140) do
   create_table "ideas", force: :cascade do |t|
     t.bigint "user_id"
     t.text "content"
-    t.string "category"
+    t.string "category", default: [], array: true
     t.string "stage"
     t.string "channel"
     t.datetime "created_at", null: false
