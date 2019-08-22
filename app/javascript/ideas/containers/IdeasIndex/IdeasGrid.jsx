@@ -16,9 +16,15 @@ class IdeasGrid extends Component {
         <Col sm={12} md={6} lg={4}>
           <Link to={`/ideas/${idea.id}`} key={idea.id}>
             <div className="post-item">
-              <h3>{idea.content}</h3>
-              <p>from: {idea.channel}</p>
-              <p>category: {idea.category}</p>
+              <h3 className="idea-content">{idea.content}</h3>
+              <p className="idea-details">
+                from:
+                {idea.channel}
+              </p>
+              <p className="idea-details">
+                category:
+                {idea.category}
+              </p>
             </div>
           </Link>
         </Col>
