@@ -9,7 +9,7 @@ class Api::V1::SlackInteractionsController < ActionController::Base
     idea = Idea.create!(
       content: params[:text],
       category: category,
-      user: User.find(3),
+      user: User.find_by(uid: params[:user_id]),
       channel: params[:channel_name],
       stage: "seed"
       )
@@ -17,7 +17,7 @@ class Api::V1::SlackInteractionsController < ActionController::Base
       "text": "#{idea.content}",
       "attachments": [
         {
-          "text": "#{idea.user.email} just logged a new idea",
+          "text": "#{idea.user.firstname} just logged a new idea!",
           "fallback": "You are unable to choose a game",
           "callback_id": "wopr_game",
           "color": "#3AA3E3",

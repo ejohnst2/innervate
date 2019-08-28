@@ -1,0 +1,36 @@
+tim:
+  email: tim@gmail.com
+  encrypted_password: wrnwfin4948wdknw
+  team: valid_team
+  username: timZ
+  firstname: Tim
+  lastname: John
+  provider: slack
+  uid: UA6U099FV
+  admin: false
+tom:
+  email: tom@gmail.com
+  encrypted_password: wrnwfin4948wdknwqepkeq9
+  team: valid_team
+  username: tom23
+  firstname: Tom
+  lastname: Curry
+  provider: slack
+  uid: UA6U099FV
+  admin: false
+bob:
+  email: bob@gmail.com
+  encrypted_password: wrnwfin49439r2knw
+  username: bigbob
+  firstname: Bob
+  lastname: Dylan
+  provider: slack
+  uid: UB6U097FV
+  admin: true
+karina:
+  encrypted_password: wrnwfin49439r2knw
+  username: bigbob
+  firstname: Bob
+  lastname: Dylan
+  provider: slack
+  admin: true

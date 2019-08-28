@@ -1,0 +1,6 @@
+no_user_endorsement:
+  user:
+  idea: valid_idea
+no_idea_endorsement:
+  user: tim
+  idea:

@@ -13,44 +13,44 @@ User.destroy_all
 Team.destroy_all
 
 
-# create teams
+# # create teams
 
-puts 'Creating team...'
+# puts 'Creating team...'
 
-team_one = Team.create!(
-  plan: "free",
-  name: "team_one",
-  slack_id: "150000"
-)
+# team_one = Team.create!(
+#   plan: "free",
+#   name: "team_one",
+#   slack_id: "150000"
+# )
 
-puts 'Creating team...'
-team_two = Team.create!(
-  plan: "free",
-  name: "team_two",
-  slack_id: "140000"
-)
+# puts 'Creating team...'
+# team_two = Team.create!(
+#   plan: "free",
+#   name: "team_two",
+#   slack_id: "140000"
+# )
 
-# create users
+# # create users
 
-puts 'Creating user...'
+# puts 'Creating user...'
 
-5.times do
-  User.create!(
-    email: Faker::Internet.free_email,
-    username: Faker::Internet.username,
-    password: Faker::Internet.password,
-    team: [team_one, team_two].sample
-  )
-end
+# 5.times do
+#   User.create!(
+#     email: Faker::Internet.free_email,
+#     username: Faker::Internet.username,
+#     password: Faker::Internet.password,
+#     team: [team_one, team_two].sample
+#   )
+# end
 
-# create ideas
-puts 'Creating 10 ideas...'
+# # create ideas
+# puts 'Creating 10 ideas...'
 
-10.times do
-  Idea.create!(
-    category: Faker::Hacker.adjective,
-    content: Faker::Hacker.say_something_smart,
-    channel: Faker::Hacker.noun,
-    user: User.all.sample
-  )
-end
+# 10.times do
+#   Idea.create!(
+#     category: Faker::Hacker.adjective,
+#     content: Faker::Hacker.say_something_smart,
+#     channel: Faker::Hacker.noun,
+#     user: User.all.sample
+#   )
+# end

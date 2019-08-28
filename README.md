@@ -1,3 +1,15 @@
+### Project Design Files 
+* Figma Project: https://www.figma.com/file/085TizG5tbFIDp0vOlud08ay/Innervate?node-id=12%3A2
+* DB Design: TBD 
+
+### Core Project Stack
+* UX/UI Design: Figma
+* API: Ruby-on-Rails
+* Interface: React/Redux
+* Database: Postgresql
+* Production Hosting: Heroku 
+* Continuous Integration: Travis CI 
+
 # Product Overview
 Innervate provides you the structure and flexibility to let ideas flow and flourish without having to manage anything yourself. Using a simple idea command and hashtags to categorize, your idea board will start populating from your workforce.  
 
@@ -15,12 +27,6 @@ Through its idea lifecycle, a single idea can be seed, promising, or initiative.
 
 While logged into your internet idea lab, you can sort your organisation’s ideas based on any combination of category, endorsement, stage, and recency. Ideas will default to the idea graveyard after 90 days since its original posting. Users can level up and have different stages of ideation. If a user passes X ideas, make an announcement to the Slack channel. 
 
-### Core Project Stack
-* UX/UI Design: Framer X
-* Primary Framework: Ruby-on-Rails
-* Frontend Framework: ReactJS
-* Database: Postgresql
-* Production Hosting: Heroku 
 
 ## External APIs
 * Realtime Board
@@ -86,7 +92,6 @@ Web Interface
 8. see initiatives 
 6. add to (branch off of) my idea 
 7. add to (branch off of) other people's ideas 
-
 
 #### As an admin, I want to...
 
