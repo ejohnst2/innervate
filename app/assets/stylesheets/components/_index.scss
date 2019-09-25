@@ -1,3 +1,14 @@
 // Import your components CSS files here.
 @import "alert";
 @import "navbar";
+
+.idea-btn {
+  width: 100px;
+  height: 30px;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $brand-primary;
+  color: white;
+}
